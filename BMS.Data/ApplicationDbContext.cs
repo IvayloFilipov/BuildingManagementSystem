@@ -1,6 +1,8 @@
 ﻿using BMS.Models.BuildingData;
+using BMS.Models.BuildingIncomes;
 using BMS.Models.BuldingExpenses;
 using BMS.Models.Debts;
+using BMS.Models.Funds;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -26,11 +28,16 @@ namespace BMS.Data
         public DbSet<PropertyType> PropertyTypes { get; set; }
         public DbSet<Tenant> Tenants { get; set; }
 
+        public DbSet<Payment> IncomingPayments { get; set; }
+        public DbSet<PaymentType> PaymentTypes { get; set; }
+
         public DbSet<Transaction> OutgoingPayments { get; set; }
 
         public DbSet<Fee> Fees { get; set; }
         public DbSet<PropertyDebt> PropertyDebtsMonthly { get; set; }
         public DbSet<PropertyStatus> PropertyStatusMonthly { get; set; }
+
+        public DbSet<Account> BuildingAccounts { get; set; }
 
     }
 }

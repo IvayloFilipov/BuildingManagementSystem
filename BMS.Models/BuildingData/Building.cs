@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using BMS.Models.Funds;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace BMS.Models.BuildingData

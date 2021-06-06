@@ -1,4 +1,7 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+using BMS.Models.BuildingData;
 
 namespace BMS.Models.Debts
 {

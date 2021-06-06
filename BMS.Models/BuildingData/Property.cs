@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
+using BMS.Models.Debts;
+using BMS.Models.BuildingIncomes;
+
 namespace BMS.Models.BuildingData
 {
     public class  Property
