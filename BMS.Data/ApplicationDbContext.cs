@@ -16,6 +16,7 @@ namespace BMS.Data
         {
         }
 
+        //BuildingData
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Building> Building { get; set; }
         public DbSet<City> Cities { get; set; }
@@ -27,16 +28,21 @@ namespace BMS.Data
         public DbSet<PropertyType> PropertyTypes { get; set; }
         public DbSet<Tenant> Tenants { get; set; }
 
+        //BuildingIncomes
         public DbSet<Payment> IncomingPayments { get; set; }
         public DbSet<PaymentType> PaymentTypes { get; set; }
 
+        //BuildingExpenses
         public DbSet<Transaction> OutgoingPayments { get; set; }
 
+        //Debts
         public DbSet<Fee> Fees { get; set; }
         public DbSet<PropertyDebt> PropertyDebtsMonthly { get; set; }
         public DbSet<PropertyStatus> PropertyStatusMonthly { get; set; }
 
+        //Funds
         public DbSet<Account> BuildingAccounts { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
