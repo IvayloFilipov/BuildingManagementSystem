@@ -5,7 +5,6 @@ namespace BMS.Models.BuildingData
     public class Address
     {
         [Key]
-        //[ForeignKey("Building")]
         public int Id { get; set; }
 
         //one-to-many with City -> one unique address can be/have in only one City
@@ -31,7 +30,7 @@ namespace BMS.Models.BuildingData
 
         public int? Floor { get; set; }
 
-        public int? AppartmentNumber { get; set; }
+        public int? AppartNumber { get; set; }
 
 
         //one-to-one with Building

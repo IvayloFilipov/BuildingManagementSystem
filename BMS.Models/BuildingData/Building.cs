@@ -1,6 +1,7 @@
-﻿using BMS.Models.Funds;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+
+using BMS.Models.Funds;
 
 namespace BMS.Models.BuildingData
 {

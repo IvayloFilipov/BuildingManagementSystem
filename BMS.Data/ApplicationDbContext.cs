@@ -17,7 +17,6 @@ namespace BMS.Data
         }
 
         public DbSet<Address> Addresses { get; set; }
-
         public DbSet<Building> Building { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<CompanyOwner> CompanyOwners { get; set; }
