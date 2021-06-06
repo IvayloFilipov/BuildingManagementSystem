@@ -39,5 +39,22 @@ namespace BMS.Data
 
         public DbSet<Account> BuildingAccounts { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<PropertyOwner>()
+                .HasKey(po => po.Id);
+
+            builder.Entity<Property>()
+                .HasMany(p => p.Owners)
+                .WithOne(o => o.Property)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.Entity<Owner>()
+                .HasMany(o => o.Properties)
+                .WithOne(p => p.Owner)
+                .OnDelete(DeleteBehavior.NoAction);
+        }
     }
 }
