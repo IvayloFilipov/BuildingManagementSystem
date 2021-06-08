@@ -1,11 +1,12 @@
-﻿using BMS.Models.BuildingData;
-using BMS.Models.BuildingIncomes;
-using BMS.Models.BuldingExpenses;
-using BMS.Models.Debts;
-using BMS.Models.Funds;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+
+using BMS.Models.Debts;
+using BMS.Models.BuildingData;
+using BMS.Models.BuildingFunds;
+using BMS.Models.BuildingIncomes;
+using BMS.Models.BuldingExpenses;
 
 namespace BMS.Data
 {

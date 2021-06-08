@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-using BMS.Models.Funds;
+using BMS.Models.BuildingFunds;
 using BMS.Models.BuldingExpenses;
 
 namespace BMS.Models.BuildingIncomes

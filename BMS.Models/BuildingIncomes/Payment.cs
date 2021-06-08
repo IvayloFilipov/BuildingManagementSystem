@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-using BMS.Models.Funds;
 using BMS.Models.BuildingData;
+using BMS.Models.BuildingFunds;
 
 namespace BMS.Models.BuildingIncomes
 {

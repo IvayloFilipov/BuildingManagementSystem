@@ -6,7 +6,7 @@ using BMS.Models.BuildingIncomes;
 using BMS.Models.BuldingExpenses;
 
 
-namespace BMS.Models.Funds
+namespace BMS.Models.BuildingFunds
 {
     public class Account
     {

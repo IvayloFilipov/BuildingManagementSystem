@@ -1,11 +1,9 @@
-﻿using BMS.Web.Models;
+﻿using System.Diagnostics;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+
+using BMS.Web.Models;
 
 namespace BMS.Web.Controllers
 {
@@ -17,12 +15,12 @@ namespace BMS.Web.Controllers
         {
             _logger = logger;
         }
-
+        // /Home/Index
         public IActionResult Index()
         {
             return View();
         }
-
+        // /Home/Privacy
         public IActionResult Privacy()
         {
             return View();
