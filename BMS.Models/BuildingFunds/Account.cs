@@ -6,7 +6,7 @@ using BMS.Models.BuildingIncomes;
 using BMS.Models.BuldingExpenses;
 
 
-namespace BMS.Models.Funds
+namespace BMS.Models.BuildingFunds
 {
     public class Account
     {
@@ -31,9 +31,9 @@ namespace BMS.Models.Funds
         public virtual Building Buildings { get; set; }
 
 
-        // one-to-one with PaymentType
-        public int PaymentTypeId { get; set; }
-        public virtual PaymentType PaymentType { get; set; }
+        // one-to-one with PaymentType // ?!?!?!?!?!
+        //public int PaymentTypeId { get; set; }
+        //public virtual PaymentType PaymentType { get; set; }
 
 
         [Required]

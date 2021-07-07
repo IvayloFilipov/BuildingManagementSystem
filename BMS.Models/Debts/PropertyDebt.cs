@@ -22,7 +22,7 @@ namespace BMS.Models.Debts
         public virtual PropertyStatus PropertyStatus { get; set; }
 
 
-        // one-to-many with Fee - one fee ammount can be used bey many Properties (PropertyDebts)
+        // one-to-many with Fee - one fee ammount can be used by many Properties (PropertyDebts)
         public int FeeId { get; set; }
         public virtual Fee Fee { get; set; }
 

@@ -32,6 +32,9 @@ namespace BMS.Models.BuildingData
         [MaxLength(50)]
         public string Phone { get; set; }
 
+        // default - false, if is removed and has new tenant -> true
+        public bool IsRemoved { get; set; }
+
         //many-to-one with Property - many Properties can be hired by one Tenant
         public virtual ICollection<Property> TenantProperties { get; set; }
     }

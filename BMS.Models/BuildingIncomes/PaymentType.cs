@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-using BMS.Models.Funds;
+using BMS.Models.BuildingFunds;
 using BMS.Models.BuldingExpenses;
 
 namespace BMS.Models.BuildingIncomes
@@ -23,7 +23,7 @@ namespace BMS.Models.BuildingIncomes
         public string Type { get; set; } //cash, bank
 
         // one-to-one with Account
-        public virtual Account Account { get; set; }
+        //public virtual Account Account { get; set; }
 
 
         //many-to-one - many incoming payments can have one type payment

@@ -31,6 +31,8 @@ namespace BMS.Models.BuildingData
         [MaxLength(50)]
         public string Phone { get; set; }
 
+        // default - false, if is removed and has new owner -> true
+        public bool IsRemoved { get; set; }
 
         //many-to-many with Property - make class PropertyOwner
         public virtual ICollection<PropertyOwner> Properties { get; set; }

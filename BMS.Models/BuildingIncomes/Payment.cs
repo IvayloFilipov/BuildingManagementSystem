@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-using BMS.Models.Funds;
 using BMS.Models.BuildingData;
+using BMS.Models.BuildingFunds;
 
 namespace BMS.Models.BuildingIncomes
 {
@@ -26,7 +26,7 @@ namespace BMS.Models.BuildingIncomes
 
         [Required]
         [MaxLength(250)]
-        public string PaymentPeriod { get; set; }
+        public string PaymentPeriod { get; set; } // REMOVE THIS
 
 
         //one-to-many with Account - one payment can be paid to many Accounts (cash, bank) every month

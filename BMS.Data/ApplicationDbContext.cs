@@ -1,11 +1,13 @@
-﻿using BMS.Models.BuildingData;
-using BMS.Models.BuildingIncomes;
-using BMS.Models.BuldingExpenses;
-using BMS.Models.Debts;
-using BMS.Models.Funds;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+
+using BMS.Models.Debts;
+using BMS.Models.BuildingData;
+using BMS.Models.BuildingFunds;
+using BMS.Models.BuildingIncomes;
+using BMS.Models.BuldingExpenses;
+using BMS.Models.Common;
 
 namespace BMS.Data
 {
@@ -28,6 +30,9 @@ namespace BMS.Data
         public DbSet<PropertyType> PropertyTypes { get; set; }
         public DbSet<Tenant> Tenants { get; set; }
 
+        //BuildingFunds
+        public DbSet<Account> BuildingAccounts { get; set; }
+
         //BuildingIncomes
         public DbSet<Payment> IncomingPayments { get; set; }
         public DbSet<PaymentType> PaymentTypes { get; set; }
@@ -35,14 +40,21 @@ namespace BMS.Data
         //BuildingExpenses
         public DbSet<Transaction> OutgoingPayments { get; set; }
 
+        // Common
+        public DbSet<ContactForm> ContactForms { get; set; }
+        public DbSet<File> Files { get; set; }
+
         //Debts
         public DbSet<Fee> Fees { get; set; }
         public DbSet<PropertyDebt> PropertyDebtsMonthly { get; set; }
         public DbSet<PropertyStatus> PropertyStatusMonthly { get; set; }
 
-        //Funds
-        public DbSet<Account> BuildingAccounts { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            // .UseLazyLoadingProxies() <- need this in order Lazy loading to work
+        }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

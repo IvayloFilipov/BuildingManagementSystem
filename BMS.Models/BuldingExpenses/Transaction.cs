@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-using BMS.Models.Funds;
+using BMS.Models.BuildingFunds;
 using BMS.Models.BuildingIncomes;
 
 namespace BMS.Models.BuldingExpenses
@@ -19,6 +19,10 @@ namespace BMS.Models.BuldingExpenses
         [MaxLength(250)]
         public string Description { get; set; }
 
+        //one-to-many with ExpenseType -
+        [Required]
+        public int ExpenseTypeId { get; set; }
+        public ExpenseType ExpenseType { get; set; }
 
         //one-to-many with PaymentType - 
         public int? PaymentTypeId { get; set; }

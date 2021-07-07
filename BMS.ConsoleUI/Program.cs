@@ -20,6 +20,7 @@ namespace BMS.ConsoleUI
             var dbContext = serviceProvider.GetService<ApplicationDbContext>();
         }
 
+        //DI container
         private static void ConfigureServices(IServiceCollection services)
         {
             var configuration = new ConfigurationBuilder()

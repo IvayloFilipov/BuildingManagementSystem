@@ -33,6 +33,8 @@ namespace BMS.Models.BuildingData
         [MaxLength(20)]
         public string Phone { get; set; }
 
+        // default - false, if is removed and has new owner -> true
+        public bool IsRemoved { get; set; }
 
         //one-to-one with Address - one/every CompanyOwner has only one permanent address
         public int AddressId { get; set; }
